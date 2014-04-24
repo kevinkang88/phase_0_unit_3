@@ -2,7 +2,15 @@
 
 ## Release 0: Users Fields
 <!-- Identify the fields Twitter collects data for -->
-
+Fields Twitter stores for each user are:
+  id starting with at sign(@),
+  location
+  description
+  profile_image_url
+  website_url
+  tweets
+  following
+  followers 
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
 

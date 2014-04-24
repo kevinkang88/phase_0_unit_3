@@ -32,6 +32,8 @@ Users and tweets are connected by User_id starting with @.
 
 ## Release 3: Schema Design
 <!-- Include your image (inline) of your schema -->
+![Solo Schema](/week_7/imgs/solo_rel_3.jpg)
+
 
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->

@@ -11,8 +11,18 @@ Fields Twitter stores for each user are:
   tweets
   following
   followers 
+  
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
+Fields for composing new tweet:
+  main body text
+  photo
+  location
+Fields for displaying tweet:
+  name
+  id(starting with@)
+  composed_at
+  body 
 
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 

@@ -11,7 +11,7 @@ Fields Twitter stores for each user are:
   tweets
   following
   followers 
-  
+
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
 Fields for composing new tweet:
@@ -27,6 +27,8 @@ Fields for displaying tweet:
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 
 <!-- because... -->
+One to many because one user can have many tweets and tweet belongs to a user. 
+Users and tweets are connected by User_id starting with @. 
 
 ## Release 3: Schema Design
 <!-- Include your image (inline) of your schema -->

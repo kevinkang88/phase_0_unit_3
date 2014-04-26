@@ -68,7 +68,14 @@ UNIQUE statement used when setting up email field in users table is giving us er
       2           Kevin       Kang        kevinkang88@gmail.com  2014-04-26 02:39:43  2014-04-26 02:39:43  Kang Kong 
 
 ## Release 4: Change a value
-<!-- paste your terminal output here -->
+
+    > UPDATE users SET nickname='Ninja Coder',first_name='Kimmy',updated_at= DATETIME('now') WHERE id = 1;
+    > SELECT * FROM users;
+    id          first_name  last_name   email                  created_at           updated_at           nickname   
+    ----------  ----------  ----------  ---------------------  -------------------  -------------------  -----------
+    1           Kimmy       Lin         kimmy@devbootcamp.com  2014-04-26 02:36:25  2014-04-26 04:25:45  Ninja Coder
+    2           Kevin       Kang        kevinkang88@gmail.com  2014-04-26 02:39:43  2014-04-26 02:39:43  Kang Kong  
 
 ## Release 5: Reflect
 <!-- Add your reflection here -->
+I started downloading Sqlite but shortly after found out that OSX comes with one already. It was interesting how a file with a table can be created with just a simple sqlite3 statement followed by a name of a database. One of the new expression used was NOT NULL that was inside CREATE TABLE block.  NOT NULL constraint enforces a column to NOT accept NULL values. Also learned that VARCHAR is a datatype that stores certain number of characters up to 255. In this case with names which can vary in length, VARCHAR(size) should be used instead of CHAR(size) which is for fixed length data. 

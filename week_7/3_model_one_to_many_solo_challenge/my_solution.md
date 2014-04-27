@@ -37,21 +37,13 @@ Users and tweets are connected by User_id starting with @.
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 show all the tweets for a certain user id(@user)
-  SELECT * 
-  FROM tweets
-  WHERE user_id = '@user' ; 
+    SELECT * FROM tweets WHERE user_id = '@user' ; 
 show the tweets for a certain user id that were made after last Wednesday (April 23, 2014)
-    SELECT *
-    FROM tweets
-    WHERE user_id = '@user' AND composed_on > "2014-04-23" ;
+    SELECT * FROM tweets WHERE user_id = '@user' AND composed_on > "2014-04-23" ;
 show all the tweets associated with a given user's twitter handle
-    SELECT * 
-    FROM tweets
-    WHERE user_id = '@user' ; 
+    SELECT * FROM tweets WHERE user_id = '@user' ; 
 show the twitter handle associated with a given tweet id(7)
-	SELECT user_id
-	FROM tweets
-	WHERE tweets.id = 7 ;
+    SELECT user_id FROM tweets WHERE tweets.id = 7 ;
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
 This exercise was helpful in making me understand how database fits into inner workings of web application such as Twitter. I got comfortable with using sql design tools and creating foreign keys to connect tables. Creating SQL statements were not as difficult as the ones in SQLzoo however not having tools to check if statements are fetching right meta-tables got me a bit frustrated. Tools such as RSPEC, and IRB would be nice in this situation.

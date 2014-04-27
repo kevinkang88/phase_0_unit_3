@@ -37,9 +37,9 @@ Users and tweets are connected by User_id starting with @.
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 show all the tweets for a certain user id(@user)
-    SELECT * 
-    FROM tweets
-    WHERE user_id = '@user' ; 
+  SELECT * 
+  FROM tweets
+  WHERE user_id = '@user' ; 
 show the tweets for a certain user id that were made after last Wednesday (April 23, 2014)
     SELECT *
     FROM tweets

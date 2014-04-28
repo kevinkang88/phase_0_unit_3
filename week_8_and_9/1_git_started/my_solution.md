@@ -57,7 +57,7 @@ removes the file from staging area and untracks it
 #### status
 view the status of your files in the working directory and staging area
 
-## Release 3: Git Workflow
+## Release 4: Git Workflow
 
 - Push files to a remote repository
     git status 
@@ -76,3 +76,7 @@ view the status of your files in the working directory and staging area
 - Commit locally
     git add (. for all or inividual files)
     git commit -m "msg"
+
+ ## Reflect:
+
+ It wasn’t too difficult switching from using GitHub App to Terminal commands for version control. GitHub App was slightly more convenient in doing reset commands because all you had to do is uncheck the box. On the other hand, branching and merging are much more faster to do in Terminal. 

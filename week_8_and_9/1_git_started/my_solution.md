@@ -60,5 +60,19 @@ view the status of your files in the working directory and staging area
 ## Release 3: Git Workflow
 
 - Push files to a remote repository
+    git status 
+    git add .
+    git commit -m "msg" 
+    git checkout master
+    git remote add origin git@github.com:username/reponame.git 
+    git push origin master
+
 - Fetch changes
+    git remote add upstream https://github.com/octocat/repo.git 
+    git fetch upstream
+    git checkout master
+    git merge upstream/master
+
 - Commit locally
+    git add (. for all or inividual files)
+    git commit -m "msg"

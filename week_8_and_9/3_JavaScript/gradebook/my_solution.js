@@ -33,15 +33,17 @@ var average = function(ary) {
 };
 
 var gradebook = {
-  joseph:{testScore:scores[0]},
-  susan:{testScore:scores[1]},
-  william:{testScore:scores[2]},
-  elizabeth:{testScore:scores[3]},
+  Joseph:{testScore:scores[0]},
+  Susan:{testScore:scores[1]},
+  William:{testScore:scores[2]},
+  Elizabeth:{testScore:scores[3]},
   addScore:function(stu_name,grade) {
     gradebook[stu_name].testScore.push(grade);
+  },
+  getAverage:function(stu_name) {
+    return average(gradebook[stu_name].testScore);
   }
 };
-
 
 
 // __________________________________________

@@ -32,7 +32,12 @@ var average = function(ary) {
   return avg; 
 };
 
-var gradebook = new Object();
+var gradebook = {
+  joseph:new Object(),
+  susan:new Object(),
+  william:new Object(),
+  elizabeth:new Object()
+};
 
 
 

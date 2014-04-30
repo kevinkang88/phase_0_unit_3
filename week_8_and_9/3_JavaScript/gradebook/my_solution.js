@@ -36,8 +36,12 @@ var gradebook = {
   joseph:{testScore:scores[0]},
   susan:{testScore:scores[1]},
   william:{testScore:scores[2]},
-  elizabeth:{testScore:scores[3]}
+  elizabeth:{testScore:scores[3]},
+  addScore:function(stu_name,grade) {
+    gradebook[stu_name].testScore.push(grade);
+  }
 };
+
 
 
 // __________________________________________

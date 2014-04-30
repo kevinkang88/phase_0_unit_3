@@ -33,12 +33,11 @@ var average = function(ary) {
 };
 
 var gradebook = {
-  joseph:new Object(),
-  susan:new Object(),
-  william:new Object(),
-  elizabeth:new Object()
+  joseph:{testScore:scores[0]},
+  susan:{testScore:scores[1]},
+  william:{testScore:scores[2]},
+  elizabeth:{testScore:scores[3]}
 };
-
 
 
 // __________________________________________

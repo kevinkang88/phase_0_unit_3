@@ -14,21 +14,25 @@
 
 #lets say num is 90
 
+# def is_fibonacci?(num)
+#   fibs = [0,1]
+#   while fibs[-1] < num ** 2 #make sure I go up to high number
+#     fibs << fibs[-1] + fibs[-2]  
+#   end
+#   return fibs.include?(num)
+# end
+
+# REFACTORED!!!
+
 def is_fibonacci?(num)
   fibs = [0,1]
-  while fibs[-1] < num ** 2 #make sure I go up to high number
+  while num > fibonacci_array.last 
     fibs << fibs[-1] + fibs[-2]  
   end
   return fibs.include?(num)
 end
 
-
-
-# 4. Refactored Solution
-
-
-
-
+#Clark helped me refactor while statement now much faster 
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
@@ -63,3 +67,12 @@ puts assert(is_fibonacci?(927372692193078999171) == false,
 
 
 # 5. Reflection 
+
+# It was refreshing to jump back into these brainy Ruby exercises from Javascript.
+# Nature of fibonacci sequence being cumulative, I started solving problem using 
+# inject inside while loop. However, I figured out an easier way of just looping 
+# until array is filled with fibonacci numbers past the argument integer. In order 
+# to make sure that enough fibonacci sequence was generated I squared the argument 
+# integer. This happened to be one of few parts that seemed like it could be improved 
+# but I could not figure out how. Although the statement makes sure that enough numbers 
+# being generated, it seems a bit inefficient in terms of speed and memory.     

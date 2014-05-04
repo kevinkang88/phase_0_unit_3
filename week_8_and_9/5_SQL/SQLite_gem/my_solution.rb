@@ -1,6 +1,6 @@
 # U3.W7: BONUS Using the SQLite Gem
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge [with: Sebastian Belmar]
 
 require 'sqlite3'
 
@@ -80,29 +80,46 @@ print_votes_by_reps
 # Create a listing of each Politician and the voter that voted for them
 # output should include the senators name, then a long list of voters separated by a comma
 
-def voter_per_member
-  row_ex = $db.execute("SELECT politician_id, voter_id FROM votes")
+# def voter_per_member
+#   members = $db.execute("SELECT politician_id FROM votes")
+#   voters = $db.execute("SELECT voter_id FROM votes")
+#   mem_vot = members.zip(voter)
   
-  politicians = []
-  voter = []
-  row_ex.each do
-    politicians <<  $db.execute("SELECT name FROM congress_members WHERE id = '#{row_ex[0]}'")
-    voter <<  $db.execute("SELECT first_name FROM congress_members WHERE id = '#{row_ex[1]}'")
-  end
-  puts politicians.zip(voter)
+    
+#   mem_vot.each do |k, v|
+#     k = $db.execute("SELECT name FROM congress_members WHERE id = #{k}")
+#     v = $db.execute("SELECT first_name FROM voters WHERE id = #{v}")
+#   end
+  
+#   # SORT BY KEYS
+  
+#   t = [
+#     {nil => 1, 10 => 2, 16 => 4, 5=> 10},
+#     {nil => 9, 5 => 2, 17 => 3, 10 => 2},
+#     {10 => 4, 5 => 9, 17 => 1}
+#   ]
+  
+#   # Create hash of possible keys
+#   keys = t.reduce({}) { |m, h| h.each_key { |k| m[k] = [] }; m }
+  
+#   # Iterate through array, for each hash, for each key, append the 
+#   # value if key is in hash or zero otherwise
+#   t.reduce(keys) { |m, h| m.each_key { |k| m[k] << (h[k] || 0) }; m }
 
-end
+#   puts keys 
+  
+# end
 
-voter_per_member
+# voter_per_member
+
+# "SELECT first_name, last_name FROM voters"
 
 # * you'll need to do some join statements to complete these last queries!
 
 
 # REFLECTION- Include your reflection as a comment below.
-# How does the sqlite3 gem work?  What is the variable `$db` holding?  
-# Try to use your knowledge of ruby and OO to decipher this as well as h
-# ow the `#execute` method works.  Take a stab at explaining the line 
-# `$db.execute("SELECT name FROM congress_members WHERE years_in_congress 
-#   > #{minimum_years}")`.  Try to explain this as clearly as possible for 
-# your fellow students.  
-# If you're having trouble, find someone to pair on this explanation with you.
+
+# sqlite3 gem allows Ruby programs to interface with sqlite3 databse engine. the gem
+# allowed us to open database containing poll results and store it in $db variable
+# as an object. execute method is used to do a databse queries and setting it to a 
+# variable allows it to store all the rows inside an Array. 

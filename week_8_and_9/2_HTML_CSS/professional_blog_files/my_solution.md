@@ -16,9 +16,9 @@ new menubar but same concept of teleporting to sections
 ## Release 1: Wireframe/Modify your site
 You can either choose to implement Jekyll on your github.io page or you can write all of your HTML and CSS again. Make it look awesome!
 
-![wireframe1](imgs/wire1.png)
-![wireframe2](imgs/wire2.png)
-![preview](imgs/rough.png)
+![wireframe1](./imgs/wire1.png)
+![wireframe2](./imgs/wire2.png)
+![preview](./imgs/rough.png)
 
 
 ## Release 2: Get Reviews

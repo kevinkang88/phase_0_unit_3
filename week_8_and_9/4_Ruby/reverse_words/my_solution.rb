@@ -8,7 +8,13 @@
 
 
 # 3. Initial Solution
-
+def reverse_words(words)
+  separate_words = words.split
+  new_ary = separate_words.map do |word|
+    word.reverse
+  end
+  new_ary.join(' ')
+end
 
 
 

@@ -1,6 +1,5 @@
-// U3.W8-9: Gradebook from Names and Scores
 
-// I worked on this challenge [by myself, with:]
+// I worked on this challenge [with: Clark,Sebastian]
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -64,29 +63,127 @@ var officers = {
 }
 
 // Pseudocode
+// DEFINE a var counter as a function
+//   ITERATE using for over votes 
+//     DEFINE var voters
+//       ITERATE usign for over 
+
+// DEFINE a variable winner as a function that takes voteCount in as a argument
+//  iterate through votecount's position
+//    iterate through each candidates votes
+//      put all of the votes into an array
+//        find the candidate with the highest value in the array
+//        set a variable equal to the above value
+//        put the name value of the variable into the corresponding position of officers
 
 
 // __________________________________________
 // Initial Solution
 
+// var counter = function(){
+//  for(var voter in votes){
+//    var ballot = votes[voter];
+//    for(var position in ballot){
+//       var candidate = ballot[position];
+//       if(!voteCount[position][candidate]){
+//         voteCount[position][candidate] = 0;
+//       }
+//       voteCount[position][candidate]++;    
+//     }
+//   }
+// }
 
+// counter();
 
+// var winner = function() {
+//   for (var position in voteCount) {
+//     var initial = 0;
+//     for (var officer in voteCount[position]) {
+//       if (voteCount[position][officer] > initial) {
+//         officers[position] = officer;
+//         initial = voteCount[position][officer];
+//       }
+//     }
+//   }
+// }
 
-
-
+// winner();
 
 // __________________________________________
 // Refactored Solution
 
+// var counter = function(){
+//  for(var voter in votes){
+//    var ballot = votes[voter];
+//    for(var position in ballot){
+//       var candidate = ballot[position];
+//       if(!voteCount[position][candidate]){
+//         voteCount[position][candidate] = 0;
+//       }
+//       voteCount[position][candidate]++;    
+//     }
+//   }
+// }
 
+// counter();
 
+// var winner = function() {
+//   for (var position in voteCount) {
+//     var initial = 0;
+//     for (var officer in voteCount[position]) {
+//       if (voteCount[position][officer] > initial) {
+//         officers[position] = officer;
+//         initial = voteCount[position][officer];
+//       }
+//     }
+//   }
+// }
 
+// winner();
 
+// Even More Refactoring
 
+var counter = function() {
+  for (var voter in votes) {
+    for (var position in votes[voter]) {
+      var candidate = votes[voter][position];
+      if(!voteCount[position][candidate]){
+        voteCount[position][candidate] = 0 ;
+      } 
+      voteCount[position][candidate]++ ;
+    }
+  }
+}
+
+counter();
+
+var winner = function() {
+  for (var position in voteCount) {
+    var initial = 0;
+    for (var candidate in voteCount[position]) {
+      var tally = voteCount[position][candidate];
+      if (tally > initial) {
+        officers[position] = candidate;
+        initial = tally ;
+      } 
+    }
+  }
+}
+
+winner();
 // __________________________________________
 // Reflection
 
-
+// Our pairing session was done with three people and it worked out better 
+// than I thought. Since we met up in person it was more conversational and 
+// enjoyed not having technical difficulties such as bad internet connection. 
+// Since it was three people, I was comfortable going outside of my box and 
+// being navigator although js is not my strong point. Clark suggested using 
+// for loop inside for loop. It worked out really well and gave us access to 
+// all the variables within an object. One thing I found out about myself 
+// when writing if..else statement was that I usually try to write else part 
+// of the code even though not needed. I need to pay attention to details 
+// when refactoring. 
 
 
 
